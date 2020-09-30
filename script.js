@@ -20,9 +20,7 @@ function forecast5day(formSearch) {
         cardBody.append(imageTag, currentDate, temperature5day, humidity5day);
         day5.append(cardBody);
 
-      
-
-          
+            
     
       
 }   }
