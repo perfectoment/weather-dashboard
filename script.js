@@ -2,7 +2,7 @@
 function forecast5day(formSearch) {
   $.ajax({
     type: "GET",
-    url: "http://api.openweathermap.org/data/2.5/forecast?q=" + formSearch + "&appid=25e06f9ff8307c93ac15e24fa0a3c459&units=imperial",
+    url: "https://api.openweathermap.org/data/2.5/forecast?q=" + formSearch + "&appid=25e06f9ff8307c93ac15e24fa0a3c459&units=imperial",
     dataType: "json",
     success: function(response) {
       for(var i = 0; i < 40; i=i+8) {
@@ -12,7 +12,7 @@ function forecast5day(formSearch) {
         var temperature5day = $("<p>").text("Temperature: " + data.main.temp);
         var humidity5day = $("<p>").text("Humidity: " + data.main.humidity);
         var iconcode = data.weather[0].icon;
-        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png"
+        var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png"
         var imageTag = $("<img>");
         imageTag.attr("src", iconurl);
         var day5 = $("#5day");
@@ -44,7 +44,7 @@ $(document).ready(function() {
   function weatherMap(formSearch) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + formSearch + "&appid=25e06f9ff8307c93ac15e24fa0a3c459&units=imperial",
+      url: "https://api.openweathermap.org/data/2.5/weather?q=" + formSearch + "&appid=25e06f9ff8307c93ac15e24fa0a3c459&units=imperial",
       dataType: "json",
       success: function(response) {
      forecast5day(formSearch);  
