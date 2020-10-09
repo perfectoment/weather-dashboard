@@ -55,7 +55,7 @@ $(document).ready(function() {
  $("#temperature").text("Temperature " + response.main.temp + "F");
  $("#humidity").text("Humidity " + response.main.humidity + "%")
  var iconcode = response.weather[0].icon;
- var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png"
+ var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png"
  $('#img').attr('src', iconurl);
       
       
